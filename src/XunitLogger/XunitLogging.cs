@@ -11,6 +11,8 @@ public static class XunitLogging
     static AsyncLocal<Context?> loggingContext = new AsyncLocal<Context?>();
     static bool enableExceptionCapture;
 
+    public static bool RedirectStreams = true;
+
     public static void EnableExceptionCapture()
     {
         if (enableExceptionCapture)
@@ -45,6 +47,9 @@ public static class XunitLogging
 
     private static void InnerInit()
     {
+        if (RedirectStreams == false)
+            return;
+
         #region writeRedirects
 
         Trace.Listeners.Clear();

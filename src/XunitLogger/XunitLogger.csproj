@@ -3,11 +3,14 @@
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
     <PackageTags>Logging, xUnit</PackageTags>
     <Description>Extends xUnit to simplify logging.</Description>
+    <Version>4.0.99</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+    <RepositoryUrl>https://github.com/topalach/XunitLogger</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="build\XunitLogger.targets" PackagePath="build\XunitLogger.targets" />
-    <PackageReference Include="Fody" Version="6.0.2" PrivateAssets="all" />
-    <PackageReference Include="ModuleInit.Fody" Version="2.1.0" PrivateAssets="All" />
+    <None Include="..\key.snk" Link="key.snk" />
     <PackageReference Include="xunit.abstractions" Version="2.0.3" />
     <PackageReference Include="ProjectDefaults" Version="1.0.27" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19367-01" PrivateAssets="All" />
