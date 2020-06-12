@@ -3,7 +3,7 @@
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
     <PackageTags>Logging, xUnit</PackageTags>
     <Description>Extends xUnit to simplify logging.</Description>
-    <Version>4.0.99</Version>
+    <Version>4.0.991</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
     <RepositoryUrl>https://github.com/topalach/XunitLogger</RepositoryUrl>

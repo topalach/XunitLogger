@@ -163,7 +163,10 @@ public static class XunitLogging
 
         if (existingContext.TestOutput != null)
         {
-            throw new Exception("A ITestOutputHelper has already been registered.");
+            if (existingContext.TestOutput == output)
+                return existingContext;
+            
+            throw new Exception($"An {nameof(ITestOutputHelper)} has already been registered.");
         }
 
         existingContext.TestOutput = output;
